@@ -57,6 +57,8 @@ const handleSubmit = (event) => {
     };
 
     fetch(`${serverUrl}/order`, {
+        //parsing from object to string to object
+        //stringify data (obj) then back to obj
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -64,8 +66,10 @@ const handleSubmit = (event) => {
             "Content-Type": "application/json"
         }
     })
+    // once it receives data, .then executes
     .then(res => res.json())
     .then(data => {
+        //destructure
         const { status, error } = data;
         if (status === 'success') {
             window.location.href = '/order-confirmed';

@@ -9,10 +9,11 @@
 ## GET
 
 `GET` requests are meant to _fetch_ data from ...
+it serves static content
 
 ---
 
-The service initiating the request is usually a browser, or some sort of frontend that needs the data at this endpoint.
+The service initiating the request is usually a _browser_, or some sort of frontend that needs the data at this endpoint.
 
 As we've seen `GET` can also submit date, but this data is sent via query parameters.
 
@@ -36,7 +37,8 @@ _In the context of Node, the `get` is our server answering a simple request for 
 - `POST` requests are meant to submit data to the server as well.
 - `POST` submits data as part of the request object. Hence, the use of `req.body` in our code.
 
-
+body obj have whatevr you set up from the front end
+node server will analyze then sends what it knows
 
 but they also expect something in return. Sometimes it's data, and sometimes it's simply an 'OK' from the service that it received the information.
 
